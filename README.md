@@ -4,6 +4,58 @@ Mini Pasal is a PHP-based bookstore web application for browsing books, adding i
 
 It includes a storefront, admin panel, MySQL database support, and a JSON fallback mode for local demo environments.
 
+## Requirements
+
+Before running the app, make sure you have:
+
+- PHP 8.0 or newer
+- MySQL 8.0 or MariaDB
+- A local web server or PHP built-in server
+- A browser such as Chrome, Firefox, or Edge
+
+## Setup Guide
+
+1. Clone the project
+
+```bash
+git clone <your-repository-url>
+cd mini-pasal
+```
+
+2. Create the database and app user
+
+```sql
+CREATE DATABASE IF NOT EXISTS mini_pasal;
+CREATE USER IF NOT EXISTS 'mini_pasal_user'@'localhost' IDENTIFIED BY 'mini_pasal123';
+GRANT ALL PRIVILEGES ON mini_pasal.* TO 'mini_pasal_user'@'localhost';
+FLUSH PRIVILEGES;
+```
+
+3. Import the schema
+
+```sql
+USE mini_pasal;
+SOURCE /path/to/mini-pasal/schema.sql;
+```
+
+4. Start the PHP app
+
+```bash
+php -S localhost:8000
+```
+
+5. Open the app in the browser
+
+```text
+http://localhost:8000/index.php
+```
+
+6. If you need the default books again, run:
+
+```bash
+php seed.php
+```
+
 ## Features
 
 - Book catalog with search and filtering
