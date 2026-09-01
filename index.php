@@ -615,7 +615,7 @@ $userName = $_SESSION['user']['name'] ?? '';
 
 <footer class="footer mt-5">
     <div class="container text-center text-muted small">
-        Made for <strong class="text-dark">[college project]</strong> · eSewa integrated
+        Mini Pasal • Bookstore Experience
     </div>
 </footer>
 
