@@ -168,6 +168,14 @@ If you run the project on another port or host, update those values accordingly.
 
 The sample books and admin account are defined in [seeds.php](seeds.php). The app automatically inserts these into the database if the tables are empty.
 
+If you want to regenerate the initial books manually, run:
+
+```bash
+php seed.php
+```
+
+This clears the current `books` table and repopulates it with the seeded catalog from [seeds.php](seeds.php).
+
 ## Troubleshooting
 
 ### MySQL connection fails
