@@ -176,7 +176,7 @@ function initializeDatabaseSchema(mysqli $mysqli): void {
         }
     } while ($mysqli->more_results() && $mysqli->next_result());
 
-    $seed = require __DIR__ . '/seeds.php';
+    $seed = require_once __DIR__ . '/seeds.php';
     $adminData = $seed['admin'] ?? ['username' => 'admin', 'password' => 'admin123'];
     $adminUsername = (string)($adminData['username'] ?? 'admin');
     $adminEmail = (string)($adminData['email'] ?? 'admin@mini-pasal.local');
@@ -286,7 +286,7 @@ function loadBooks(): array {
 
     $file = __DIR__ . '/books.json';
     if (!file_exists($file)) {
-        $seed = require __DIR__ . '/seeds.php';
+        $seed = require_once __DIR__ . '/seeds.php';
         file_put_contents($file, json_encode($seed['books'] ?? [], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     }
 
@@ -367,7 +367,7 @@ function saveUsers(array $users): void {
 }
 
 function getAdminSeed(): array {
-    $seed = require __DIR__ . '/seeds.php';
+    $seed = require_once __DIR__ . '/seeds.php';
     return $seed['admin'] ?? ['username' => 'admin', 'password' => 'admin123'];
 }
 ?>

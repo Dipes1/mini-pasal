@@ -16,7 +16,7 @@ require 'config.php';
 
 $books = loadBooks();
 if (empty($books)) {
-    $seedData = require __DIR__ . '/seeds.php';
+    $seedData = require_once __DIR__ . '/seeds.php';
     $books = $seedData['books'] ?? [];
 }
 

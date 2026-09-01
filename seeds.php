@@ -1,22 +1,24 @@
 <?php
 
-function bookPlaceholderSvg(string $title, string $startColor = '#5e2a2a', string $endColor = '#1f3d2c'): string
-{
-    $safeTitle = preg_replace('/[^A-Za-z0-9 ]+/', ' ', $title);
-    $safeTitle = trim($safeTitle);
-    if ($safeTitle === '') {
-        $safeTitle = 'Book';
+if (!function_exists('bookPlaceholderSvg')) {
+    function bookPlaceholderSvg(string $title, string $startColor = '#5e2a2a', string $endColor = '#1f3d2c'): string
+    {
+        $safeTitle = preg_replace('/[^A-Za-z0-9 ]+/', ' ', $title);
+        $safeTitle = trim($safeTitle);
+        if ($safeTitle === '') {
+            $safeTitle = 'Book';
+        }
+
+        $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="840" viewBox="0 0 600 840">'
+            . '<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="'.$startColor.'"/><stop offset="100%" stop-color="'.$endColor.'"/></linearGradient></defs>'
+            . '<rect width="600" height="840" fill="url(#g)" rx="28"/>'
+            . '<circle cx="300" cy="280" r="130" fill="rgba(255,255,255,0.12)"/>'
+            . '<path d="M170 610c28-104 84-150 130-150s102 46 130 150" fill="rgba(255,255,255,0.18)"/>'
+            . '<text x="50%" y="62%" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700">'.htmlspecialchars($safeTitle, ENT_QUOTES, 'UTF-8').'</text>'
+            . '</svg>';
+
+        return 'data:image/svg+xml;charset=UTF-8,' . rawurlencode($svg);
     }
-
-    $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="840" viewBox="0 0 600 840">'
-        . '<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="'.$startColor.'"/><stop offset="100%" stop-color="'.$endColor.'"/></linearGradient></defs>'
-        . '<rect width="600" height="840" fill="url(#g)" rx="28"/>'
-        . '<circle cx="300" cy="280" r="130" fill="rgba(255,255,255,0.12)"/>'
-        . '<path d="M170 610c28-104 84-150 130-150s102 46 130 150" fill="rgba(255,255,255,0.18)"/>'
-        . '<text x="50%" y="62%" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700">'.htmlspecialchars($safeTitle, ENT_QUOTES, 'UTF-8').'</text>'
-        . '</svg>';
-
-    return 'data:image/svg+xml;charset=UTF-8,' . rawurlencode($svg);
 }
 
 $books = [

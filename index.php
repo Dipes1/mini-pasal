@@ -22,7 +22,7 @@ if (isset($_GET['checkout']) && !isset($_SESSION['user'])) {
     exit;
 }
 
-$seedData = require __DIR__ . '/seeds.php';
+$seedData = require_once __DIR__ . '/seeds.php';
 $books = loadBooks();
 if (empty($books)) {
     $books = $seedData['books'] ?? [];

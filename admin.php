@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/db.php';
 
-$defaultBooks = (require __DIR__ . '/seeds.php')['books'] ?? [];
+$defaultBooks = (require_once __DIR__ . '/seeds.php')['books'] ?? [];
 
 $makeBookImage = function(string $title): string {
     $safeTitle = preg_replace('/[^A-Za-z0-9 ]+/', ' ', $title);
