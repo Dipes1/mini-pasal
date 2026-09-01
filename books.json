@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "title": "Palpasa Café",
+        "author": "Narayan Wagle",
+        "price": 450,
+        "img": "https://via.placeholder.com/200x280?text=Palpasa+Cafe",
+        "description": "A moving portrait of life, migration, and longing set against the backdrop of Nepal’s changing social landscape."
+    },
+    {
+        "id": 2,
+        "title": "Summer Love",
+        "author": "Subin Bhattarai",
+        "price": 380,
+        "img": "https://via.placeholder.com/200x280?text=Summer+Love",
+        "description": "A heartfelt story about youthful emotion, memory, and the bittersweet beauty of first love."
+    },
+    {
+        "id": 3,
+        "title": "Seto Dharti",
+        "author": "Amar Neupane",
+        "price": 500,
+        "img": "https://via.placeholder.com/200x280?text=Seto+Dharti",
+        "description": "A literary journey through identity, loss, and resilience, rooted in a deeply human narrative."
+    },
+    {
+        "id": 4,
+        "title": "Karnali Blues",
+        "author": "Buddhisagar",
+        "price": 420,
+        "img": "https://via.placeholder.com/200x280?text=Karnali+Blues",
+        "description": "An evocative read exploring the beauty and hardship of the Karnali region and the people who call it home."
+    },
+    {
+        "id": 5,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "price": 600,
+        "img": "https://via.placeholder.com/200x280?text=The+Alchemist",
+        "description": "A timeless tale of purpose, destiny, and courage, following a shepherd on a life-changing journey."
+    },
+    {
+        "id": 6,
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "price": 950,
+        "img": "https://via.placeholder.com/200x280?text=Atomic+Habits",
+        "description": "A practical guide to forming habits that stick and creating systems that support lasting personal growth."
+    },
+    {
+        "id": 7,
+        "title": "The Kite Runner",
+        "author": "Khaled Hosseini",
+        "price": 820,
+        "img": "https://via.placeholder.com/200x280?text=The+Kite+Runner",
+        "description": "A powerful story of friendship, guilt, and redemption set against the changing political landscape of Afghanistan."
+    },
+    {
+        "id": 8,
+        "title": "Who Will Cry When You Die?",
+        "author": "Robin Sharma",
+        "price": 560,
+        "img": "https://via.placeholder.com/200x280?text=Who+Will+Cry+When+You+Die",
+        "description": "A motivating collection of life lessons that encourage self-improvement, purpose, and inner peace."
+    },
+    {
+        "id": 9,
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "price": 1100,
+        "img": "https://via.placeholder.com/200x280?text=Sapiens",
+        "description": "An expansive and fascinating account of human history, evolution, and the forces that shaped civilisation."
+    },
+    {
+        "id": 10,
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt",
+        "price": 1300,
+        "img": "https://via.placeholder.com/200x280?text=Pragmatic+Programmer",
+        "description": "A practical guide for developers who want to improve their craft, thinking, and delivery in real-world projects."
+    }
+]
