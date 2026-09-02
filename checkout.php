@@ -71,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $signature = generateEsewaSignature($total_amount, $transaction_uuid, ESEWA_PRODUCT_CODE);
 
-        require 'db.php';
         $stmt = $conn->prepare("INSERT INTO orders (book_title, amount, customer_name, phone, transaction_uuid, status) VALUES (?, ?, ?, ?, ?, 'PENDING')");
         $stmt->bind_param("sdsss", $title, $total_amount, $customer_name, $phone, $transaction_uuid);
         $stmt->execute();
